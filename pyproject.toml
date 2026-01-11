@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "photo-formatter"
+version = "1.0.0"
+description = "Formats photos for 10x15cm printing with automatic borders"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "BorelG"}]
+dependencies = [
+    "pillow",
+    "pillow-heif"
+]
+
+[project.scripts]
+# This points to the file 'photo_formatter.py' and the function 'main'
+photo-formatter = "photo_formatter:main"
